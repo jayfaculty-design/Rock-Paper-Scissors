@@ -57,4 +57,10 @@ function playGame() {
   }
 }
 
-playGame();
+// playGame();
+
+const paragraph = document.querySelector("#para");
+const h1 = document.createElement("h1");
+h1.textContent = "My Name";
+h1.style.cssText = "color: blue; background: red;";
+paragraph.appendChild(h1);
