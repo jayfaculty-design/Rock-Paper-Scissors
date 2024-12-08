@@ -1,0 +1,72 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 500px;
+    padding: 20px;
+    height: 500px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: yellow;
+}
+.container .top {
+    display: flex;
+    justify-content: space-between;
+}
+.container .choices {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+.choices button {
+    background: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    width: 150px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+.container .score {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.score p {
+    font-size: 12px;
+}
+.container .mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+.mid h4 {
+
+    width: fit-content;
+    margin: 0px auto;
+    padding: 5px;
+    background-color: yellowgreen;
+}
+#resultMessage {
+    display: none;
+}
