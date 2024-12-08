@@ -8,9 +8,6 @@ const cpuScore = document.getElementById("c-score");
 const showResult = document.getElementById("resultMessage");
 
 function handleBtns() {
-  playerScore.textContent = 0;
-  cpuScore.textContent = 0;
-
   rockBtn.addEventListener("click", () => {
     playerChoiceShow.textContent = "ROCK";
     let computerChoice = (computerChoiceShow.textContent = getComputerChoice());
@@ -22,12 +19,13 @@ function handleBtns() {
       showResult.textContent = "You Lost";
       showResult.style.cssText =
         "background: red; color: white; display:block;";
-      cpuScore.textContent++;
+
+      cpuScore.textContent = parseInt(cpuScore.textContent) + 1;
     } else {
       showResult.textContent = "You Win";
       showResult.style.cssText =
         "background: yellowgreen; color: black; display:block;";
-      playerScore.textContent++;
+      playerScore.textContent = parseInt(playerScore.textContent) + 1;
     }
   });
   paperBtn.addEventListener("click", () => {
@@ -41,12 +39,12 @@ function handleBtns() {
       showResult.textContent = "You Lost";
       showResult.style.cssText =
         "background: red; color: white; display:block;";
-      cpuScore.textContent++;
+      cpuScore.textContent = parseInt(cpuScore.textContent) + 1;
     } else {
       showResult.textContent = "You Win";
       showResult.style.cssText =
         "background: yellowgreen; color: black; display:block;";
-      playerScore.textContent++;
+      playerScore.textContent = parseInt(playerScore.textContent) + 1;
     }
   });
   scissorsBtn.addEventListener("click", () => {
@@ -58,14 +56,14 @@ function handleBtns() {
         "background: blue; color: white; display:block;";
     } else if (computerChoice === "ROCK") {
       showResult.textContent = "You Lost";
-      cpuScore.textContent++;
+      cpuScore.textContent = parseInt(cpuScore.textContent) + 1;
       showResult.style.cssText =
         "background: red; color: white; display:block;";
     } else {
       showResult.textContent = "You Win";
       showResult.style.cssText =
         "background: yellowgreen; color: black; display:block;";
-      playerScore.textContent++;
+      playerScore.textContent = parseInt(playerScore.textContent) + 1;
     }
   });
 }
